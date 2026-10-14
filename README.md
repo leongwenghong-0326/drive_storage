@@ -1,7 +1,11 @@
 # AetherVault - Cloud Storage & Digital Asset Management System
+
 A modern, self-hosted enterprise cloud drive and file management platform built with Native PHP and MySQL.
 
+---
+
 ## 快速开始（XAMPP）
+
 1. 将项目放置在 `C:\xampp\htdocs\drive_storage`
 2. 启动 XAMPP 的 **Apache** 与 **MySQL**（默认端口 `3307` 或 `3306`）
 3. 在浏览器打开 `http://localhost/drive_storage/`
@@ -9,12 +13,13 @@ A modern, self-hosted enterprise cloud drive and file management platform built 
 5. 登录预设账号进行体验：
    - **管理员账号**：`admin` / 密码：`Admin@123456`
    - **普通演示账号**：`demouser` / 密码：`User@123456`
-   - *（登录页面底部提供 Demo Accounts 快捷卡片，可一键自动填入）*
+   - *(登录页面底部提供 Demo Accounts 快捷卡片，可一键自动填入)*
 6. 开始上传文件、创建多级文件夹、添加彩色标签、生成加密分享外链或管理多版本历史
 
 ---
 
 ## Features
+
 - **Modern SaaS UI**: Clean responsive interface with dark mode accents, micro-animations, and custom slim scrollbars.
 - **Hierarchical File Explorer**: Multi-level nested folders, dynamic breadcrumbs, and dual-mode layout (**Grid View** & **List View**).
 - **Starred Shortcuts**: Instant visual star markers on folders and files with real-time AJAX synchronization.
@@ -30,22 +35,19 @@ A modern, self-hosted enterprise cloud drive and file management platform built 
 
 ## Screenshots
 
-| Secure Login | Dashboard Overview |
-|:---:|:---:|
+| Secure Sign-in | Dashboard Overview |
+| :---: | :---: |
 | ![Login Page](docs/screenshots/01-login.png) | ![Dashboard Overview](docs/screenshots/02-dashboard.png) |
-
-| File Explorer & Starred Folders | Color Tagging Management |
-|:---:|:---:|
+| **File Explorer & Starred Folders** | **Color Tagging Management** |
 | ![File Explorer](docs/screenshots/03-files.png) | ![Tag Management](docs/screenshots/04-tags.png) |
-
-| Tenant & User Directory | Security & Audit Logs |
-|:---:|:---:|
+| **Tenant & User Directory** | **Security & Audit Logs** |
 | ![User Directory](docs/screenshots/05-admin-users.png) | ![Audit Logs](docs/screenshots/06-admin-logs.png) |
 
 ---
 
 ## Folder Structure
-```
+
+```text
 drive_storage/
 ├── admin/                 Administrative control panel (users, files, logs, settings)
 ├── assets/                Design system stylesheets & client-side scripts
@@ -92,6 +94,7 @@ drive_storage/
 ---
 
 ## 1. XAMPP Setup & Configuration
+
 1. Clone or copy this repository to `C:\xampp\htdocs\drive_storage`.
 2. Start **Apache** and **MySQL** in the XAMPP Control Panel.
 3. Verify your MySQL port (typically `3306` or `3307` in XAMPP).
@@ -119,6 +122,7 @@ drive_storage/
 ---
 
 ## 2. File & Directory Workflows
+
 - **Upload Assets**: Drag and drop any document, spreadsheet, image, or archive into the upload zone, or click **Upload File**.
 - **Folders & Nesting**: Click **New Folder** to create directory trees. Breadcrumbs provide quick navigation back to parent folders.
 - **Star Folders & Files**: Click the star icon (`☆` / `★`) directly on folder or file cards for instant bookmarking.
@@ -128,6 +132,7 @@ drive_storage/
 ---
 
 ## 3. Sharing & Public Links
+
 - Click the **Share Link** option on any file or folder card.
 - Customize your sharing parameters:
   - **Password Protection**: Restrict access with an optional password.
@@ -137,6 +142,7 @@ drive_storage/
 ---
 
 ## 4. Administration & Tenant Management
+
 In the **Administration** sidebar section:
 - **Admin Overview**: High-level platform statistics, cluster storage consumption, and active tenants.
 - **User Management**: Provision new users, allocate custom storage quotas (e.g., `5 GB`, `20 GB`, `100 GB`), toggle active status, and reset credentials.
@@ -147,6 +153,7 @@ In the **Administration** sidebar section:
 ---
 
 ## 5. Automated Verification
+
 The platform includes an automated 32-point test suite validating all security barriers, upload handlers, version rollbacks, and storage calculations:
 
 ```bash
@@ -158,7 +165,8 @@ All 32 tests execute against the active database and file system sandbox to veri
 ---
 
 ## 6. System Flow & Architecture
-```
+
+```text
 [ User Action / Drag-and-Drop ]
              │
              ▼
@@ -178,6 +186,7 @@ All 32 tests execute against the active database and file system sandbox to veri
 ---
 
 ## 7. Security Notes
+
 - **Strict Tenant Isolation**: Users can only browse, search, download, and delete their own files and folders.
 - **MIME & Extension Blacklist**: Executable files (`.php`, `.phtml`, `.exe`, `.bat`, `.sh`, `.cmd`, `.vbs`, `.js`) are strictly blocked on upload.
 - **Physical Filename Obfuscation**: Files stored in `uploads/files/` use randomized MD5 hashes with user-specific timestamps (e.g. `9f8e7d..._179196.dat`) to prevent direct URL guessing.
@@ -190,5 +199,3 @@ All 32 tests execute against the active database and file system sandbox to veri
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-#   d r i v e _ s t o r a g e  
- 
