@@ -1,0 +1,58 @@
+# =========================================================================
+# AetherVault Cloud Storage - Git Ignore Rules
+# Protect credentials, sensitive data, uploaded files, and environment info
+# =========================================================================
+
+# Database Credentials & Production Config
+config/database_config.php
+
+# Installation Lock
+config/install.lock
+
+# User Uploaded Physical Content & Versions (Keep directory placeholders)
+uploads/files/*
+!uploads/files/.gitkeep
+uploads/versions/*
+!uploads/versions/.gitkeep
+
+# System & Application Logs
+*.log
+error_log
+logs/
+scratch/
+test_sandbox_*
+
+# Environment & Private Files
+.env
+.env.local
+.env.*.local
+
+# Operating System Caches & Metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# IDE & Editor Configuration
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.swp
+*.swo
+*~
+
+# Archives and Temporary Dumps
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.sql.gz
+*.bak
+*.tmp
